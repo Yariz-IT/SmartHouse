@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart House</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header class="mobile">
+        <div class="mobile__top">
+            <img src="/img/svg/status bar.svg" alt="status bar">
+        </div>
+        <div class="mobile__content">
+            <div id="select__box" class="select__box">
+                <div  class="select__box-selected">
+                    <span>All rooms</span>
+                    <i class="arrow">
+                        <img src="/img/svg/arrow.svg" alt="arrow">
+                    </i>
+                </div>
+
+                <div class="select__box-list">
+                    <div data-room="all" class="select__box-item selected">All rooms</div>
+                    <div data-room="living__room" class="select__box-item">Living room</div>
+                    <div data-room="bedroom" class="select__box-item">Bedroom</div>
+                    <div data-room="kitchen" class="select__box-item">Kitchen</div>
+                    <div data-room="bathroom" class="select__box-item">Bathroom</div>
+                    <div data-room="parlor" class="select__box-item">Parlor</div>
+                    <div data-room="restroom" class="select__box-item">Restroom</div>
+                </div>
+
+            </div>
+            <div id="rooms" class="rooms">
+
+                <div data-room="living__room" class="room">
+                    <i class="iving__room">
+                        <img src="/img/svg/living room.svg" alt="living room">
+                    </i>
+                    <span>Living room</span>
+                </div>
+
+                <div data-room="bedroom" class="room">
+                    <i class="bedroom">
+                        <img src="/img/svg/bedroom.svg" alt="bedroom">
+                    </i>
+                    <span>Bedroom</span>
+                </div>
+
+                <div data-room="kitchen" class="room">
+                    <i class="kitchen">
+                        <img src="/img/svg/kitchen.svg" alt="kitchen">
+                    </i>
+                    <span>Kitchen</span>
+                </div>
+
+                <div data-room="bathroom" class="room">
+                    <i class="bathroom">
+                        <img src="/img/svg/bathroom.svg" alt="bathroom">
+                    </i>
+                    <span>Bathroom</span>
+                </div>
+
+                <div data-room="parlor" class="room">
+                    <i class="parlor">
+                        <img src="/img/svg/studio.svg" alt="studio">
+                    </i>
+                    <span>Parlor</span>
+                </div>
+
+                <div data-room="restroom" class="room">
+                    <i class="restroom">
+                        <img src="/img/svg/restroom.svg" alt="restroom">
+                    </i>
+                    <span>Restroom</span>
+                </div>
+
+            </div>
+            <div id="settings" class="settings">
+                <div id="settings__tabs" class="settings__tabs ">
+
+                    <div data-type="temperature" class="tab selected">
+                        <i class="room__temperature">
+                            <img src="/img/svg/temperature.svg" alt="temperature">
+                        </i>
+                        <span>Temperature</span>
+                    </div>
+
+                    <div data-type="light" class="tab">
+                        <i class="room__light">
+                            <img src="/img/svg/light.svg" alt="light">
+                        </i>
+                        <span>Light</span>
+                    </div>
+
+                    <div data-type="humidity" class="tab">
+                        <i class="room__humidity">
+                            <img src="img/svg/humidity.svg" alt="humidity">
+                        </i>
+                        <span>Humidity</span>
+                    </div>
+
+                </div>
+
+                <div id="settings__panel" class="settings__screens">
+                    <div data-type="temperature" class="settings__screen selected">
+                        <div class="settings__screen-title"> Temperature </div>
+                        <div id="temperature__button" class="temperature__button">
+                            <svg class="dots-box" viewBox="0 0 103 103">
+                                <circle class="dots" r="50" cx="50%" cy="50%"> </circle>
+                                <circle class="line" r="44" cx="50%" cy="50%"> </circle>
+                                <circle id="temperature__line" class="line-active" r="44" cx="50%" cy="50%"> </circle>
+                                <circle class="separate__line" r="44" cx="50%" cy="50%"> </circle>
+                                <circle id="temperature__round" class="round" r="44" cx="50%" cy="50%"> </circle>
+                                <circle class="separate__dots" r="50" cx="50%" cy="50%"> </circle>
+                            </svg>
+
+                            <div class="temperature__button-info">
+                                <span id="temperature">15</span>
+                                <span>°C</span>
+                            </div>
+
+                        </div>
+
+                        <div id="knob" class="knob">
+                            <i>
+                                <img src="/img/svg/knob.svg" alt="button">
+                            </i>
+                        </div>
+
+                        <div class="knob-label">
+                            Click to turn off
+                        </div>
+
+                        <div id="save__temperature" class="set__temperature">
+                            Set Temperature
+                        </div>
+
+                    </div>
+
+                    <div data-type="light" class="settings__screen">
+                        <div class="settings__screen-title">Intensity</div>
+                        <div class="settings__screen-icon">
+                            <i class="sun">
+                                <img src="/img/svg/sun.svg" alt="sun">
+                            </i>
+                        </div>
+
+                        <div class="slider">
+                            <div id="light__slider" class="slider__progress">
+                                <span>45</span>
+                                %
+                            </div>
+                        </div>
+
+                        <div id="switch__off-light" class="switch">
+                            <div></div>
+                        </div>
+                    </div>
+
+                    <div data-type="humidity" class="settings__screen">
+                        <div class="settings__screen-title">Intensity</div>
+                        <div class="settings__screen-icon">
+                            <i class="humidity">
+                                <img src="/img/svg/humidity.svg" alt="humidity">
+                            </i>
+                        </div>
+
+
+                        <div class="slider">
+                            <div id="humidity__slider" class="slider__progress">
+                                <span>45</span>%
+                            </div>
+                        </div>
+
+                        <div id="switch__off-humidity" class="switch">
+                            <div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mobile__bottom">
+            <img src="/img/svg/status bar bottom.svg" alt="status bar bottom">
+        </div>
+
+    </header>
+
+    <script src="/js/master.js"></script>
+    <script src="/js/selectRoom.js"></script>
+    <script src="/js/nextScreen.js"></script>
+    <script src="/js/renderTemperature.js"></script>
+    <script src="/js/changeTemperature.js"></script>
+    <script src="/js/changeSwitch.js"></script>
+    <script src="/js/watchSlider.js"></script>
+    <script src="/js/changeSlider.js"></script>
+    <script src="/js/changeSettingsType.js"></script>
+    <script src="/js/setTemperatureKnob.js"></script>
+
+</body>
+
+</html>

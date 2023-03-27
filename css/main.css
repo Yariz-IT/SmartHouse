@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@import url('./mobile.css'); 
+@import url('./select.css'); 
+@import url('./rooms.css'); 
+@import url('./settings.css'); 
+@import url('./temperature.css'); 
+@import url('./tabs.css'); 
+
+:root {
+    --gradient: linear-gradient(to right, #c5e0e2, #9ec3d5);
+    --grey: #f0f0f0
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #e0e5eb;
+    display: grid;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.arrow {
+    display: inline-block;
+    transform: rotate(-0deg);
+    font-size: 0.7em;
+    margin-left: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.knob {
+    background: var(--gradient);
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    font-size: 24px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    padding-top: 4px;
+    padding-left: 1px;
+    cursor: pointer;
+}
+
+.knob.off {
+    background: var(--grey);
+}
+
+.knob-label {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.set__temperature {
+    background: var(--gradient);
+    color: #fff;
+    width: 250px;
+    margin: 20px auto 0;
+    border-radius: 100px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+
+
+}
+
+.slider {
+    cursor: pointer;
+    width: 100px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: var(--grey);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+.slider__progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient);
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    min-height: 30px;
+    height: 45%;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+
+}
+
+.switch {
+    cursor: pointer;
+    width: 60px;
+    height: 28px;
+    border-radius: 60px;
+    background: var(--grey);
+    margin: 30px auto 0;
+    position: relative;
+}
+
+.switch.off div {
+    left: 0;
+    background: #bbb;
+}
+
+.switch div {
+    position: absolute;
+    left: 52%;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    background: var(--gradient);
+    transition: all 0.3s ease-in-out;
+}
+
+.dots-box {
+    transform: rotate(5deg);
+    position: absolute;
+    transform-origin: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+ .dots {
+    fill: transparent;
+    stroke: var(--grey);
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray: 0 10;
+
+ }
+
+.line,
+.dots,
+.line-active,
+.round,
+.separate__line,
+.separate__dots {
+    fill: transparent;
+    stroke: var(--grey);
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray: 0 21;
+    pointer-events: none;
+}
+
+.line,
+.line-active,
+.round {
+    stroke-width: 1px;
+    stroke-dasharray: 265 265;
+    transform: rotate(60deg);
+    transform-origin: center;
+        pointer-events: none;
+
+}
+
+
+.line-active {
+    stroke: black;
+    stroke-dasharray: 265 265;
+    /* от 54 до 276 градусов  */
+}
+
+.round {
+    stroke-width: 6px;
+    stroke-dasharray: 0 276;
+    transform: rotate(48deg);
+    /* от -240 до 48 градусов  */
+
+}
+
+.separate__line,
+.separate__dots {
+    stroke: #fff;
+    transform: rotate(60deg);
+    transform-origin: center;
+}
+
+.separate__dots {
+    stroke-dasharray: 40 313;
+}
+
+.separate__line {
+    transform: rotate(49deg);
+    stroke-dasharray: 52 276;
+}

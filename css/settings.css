@@ -1,0 +1,30 @@
+.settings {
+    padding: 0 20px;
+    display: none;
+}
+
+.settings__tabs {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 85px;
+}
+
+.settings__screen {
+    display: none;
+}
+.settings__screen.selected {
+    display: block;
+}
+
+.settings__screen-icon {
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+
+.settings__screen-title {
+    text-align: center;
+    margin: 23px 0 15px;
+    font-weight: 300;
+}

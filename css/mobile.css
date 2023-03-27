@@ -1,0 +1,26 @@
+.mobile {
+    width: 350px;
+    height: 690px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.3);
+    grid-template-rows: 48px 1fr 60px;
+    display: grid;
+
+}
+
+.mobile__top,
+.mobile__bottom {
+    align-self: center;
+    justify-self: center;
+}
+
+.mobile__content {
+    background: #fff;
+}
+
+.mobile__top,
+.mobile__bottom {
+    align-self: center;
+    justify-self: center;
+}
