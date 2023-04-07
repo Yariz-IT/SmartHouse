@@ -6,6 +6,4 @@
 
 <br/>
 
- <div align="center">
-     <img src="https://github.com/Yariz-IT/SmartHouse/blob/main/smart%20house.gif"/>
-  </div> 
+
